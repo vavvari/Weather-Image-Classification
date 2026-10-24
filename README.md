@@ -2,8 +2,6 @@
  
 Classifying photos into **11 weather types** using unsupervised clustering, probabilistic classifiers, a deep neural network, and a convolutional autoencoder with learned embeddings. The project compares how each approach handles noisy, real-world, unconstrained images.
  
-**Course:** DAT 402 (Arizona State University) | **Author:** Vamshi Avvari
- 
 ## Dataset
  
 [Weather Image Recognition (Kaggle)](https://www.kaggle.com/datasets/jehanbhathena/weather-dataset/data): 6,862 images across 11 classes: dew, fogsmog, frost, glaze, hail, lightning, rain, rainbow, rime, sandstorm, snow. Classes are imbalanced (rime has 1,160 images, rainbow has 232).
@@ -30,10 +28,7 @@ Chance level for 11 classes is roughly 9%.
 - Raw-pixel k-means clusters overlap heavily (silhouette 0.051). Autoencoder embeddings were only slightly better (silhouette 0.099, adjusted Rand index 0.094, NMI 0.205).
 - The convolutional features beat the fully connected network, supporting the value of spatial structure for images.
 - Accuracy is modest. The images are unconstrained (varied scenes and backgrounds), and several classes are visually similar (for example frost, rime, and glaze).
-## Limitations and Next Steps
- 
-- No data augmentation, no regularization, and limited epochs. The dense network was trained without a validation split.
-- Natural next steps are a supervised CNN trained end-to-end, transfer learning (for example ResNet or MobileNet), augmentation, and class-weighted training for the imbalanced classes.
+
 ## Tech Stack
  
 Python, TensorFlow/Keras, scikit-learn, NumPy, pandas, PIL, matplotlib, seaborn
