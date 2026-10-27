@@ -38,7 +38,7 @@ Python, TensorFlow/Keras, scikit-learn, NumPy, pandas, PIL, matplotlib, seaborn
 ```bash
 pip install tensorflow scikit-learn pandas numpy pillow matplotlib seaborn
 # download the Kaggle dataset and set data_dir in the notebook to the folder containing the class subfolders
-jupyter notebook proj2.ipynb
+jupyter notebook weatherclass.ipynb
 ```
  
 > Note: `data_dir` in the notebook is a local Windows path. Update it before running.
